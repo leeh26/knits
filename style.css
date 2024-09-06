@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+h2 {
+    font-family: 'Righteous';
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navbar img {
+    height: 50px; /* Adjust logo size */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px;
+    transition: font-size 0.3s ease;
+    color: black;
+}
+
+.navbar a:hover {
+    font-size : 40px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 500px;
+}
+.main p {
+    padding-bottom: 2rem;
+}
+.main h2 {
+    padding: 0.75rem;
+}
+.main a, .promo a, .hero a, .notice a {
+    border: solid 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+}
+.main a:hover {
+    background-color: #575757;
+    border: none 1px;
+    color: white;
+}
+.hero {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.hero p {
+    padding: 0.25rem;
+}
+.hero a {
+    margin: 1rem;
+}
+.content .month {
+    border: solid 1px;
+    width: 70vw;
+    cursor: pointer;
+    margin: 0.25rem;
+}
+.month:hover {
+    background-color: #575757;
+    color: white;
+}
+.month-content {
+    display: none;
+    padding: 0.25rem;
+}
+
+.month-content.active {
+    display: block;
+}
+.promo {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.promo a {
+    position: absolute;
+    right: 1rem;
+}
+.promo img {
+    height: 100px;
+    position: absolute;
+    left: 1rem;
+}
+.notice {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.notice-child {
+    width: 50vw;
+    height: auto;
+    padding: 1.5rem;
+    background-color: #D3D3D3;
+}
+
+.notice-child p {
+    padding-bottom: 1rem;
+}
+@media (max-width: 600px) {
+    .notice-child {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
+.ashford{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px;
+}
+.ashford h2 {
+    padding-bottom: 2rem;
+}
+.ashford .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ashford .product {
+    border: solid 1px black;
+    min-width: 300px;
+    flex: 0 1 calc(50% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 5px;
+    height: 300px;
+}
+.ashford .product img {
+    width: 200px;
+}
+@media (max-width: 600px) {
+    .ashford .product {
+        flex: 0 1 100%;
+    }
+}
+.map {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map iframe {
+    width: 90vw;
+    height: 300px;
+}
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem;
+}
+footer div {
+    padding-left: 2.5rem;
+}
+footer .hours {
+    padding-left: 5rem;
+}
+@media (max-width: 800px) {
+    footer {
+        grid-template-columns: repeat(2, 1fr); /* Change to two columns */
+    }
+}
+
+@media (max-width: 500px) {
+    footer {
+        grid-template-columns: 1fr; /* Stack all items in one column */
+    }
+
+    footer div {
+        padding-left: 0; /* Remove left padding for better spacing */
+        padding-bottom: 1rem; /* Add some spacing between stacked items */
+    }
+    footer .hours {
+        padding-left: 0;
+    }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Initially hide the menu */
+    }
+
+    .navbar ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Space between items */
+        width: 100%; /* Full width for each item */
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center; /* Center text */
+        width: 100%; /* Full width for clickable area */
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button */
+        background-color: #333; /* Same as navbar */
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide toggle button on larger screens */
+    }
+}
+
